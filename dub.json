@@ -1,0 +1,23 @@
+{
+    "name": "derelict-mpg123",
+    "description": "A dynamic binding to libmpg123",
+    "homepage": "https://github.com/buggins/DerelictMPG123",
+    "license": "Boost",
+    "authors": [
+        "Vadim Lopatin"
+    ],
+
+    "targetName": "DerelictMPG123",
+    "targetPath": "lib",
+
+    "copyFiles-windows-x86_64": [
+        "libs/windows/x86_64/libmpg123-0.dll"
+    ],
+    "copyFiles-windows-x86": [
+        "libs/windows/x86/libmpg123-0.dll"
+    ],
+
+    "dependencies": {
+        "derelict-util": ">=1.0.3"
+    }
+}

@@ -413,6 +413,7 @@
    <Folder name="derelict">
     <Folder name="mpg123">
      <File path="source\derelict\mpg123\libmpg123.d" />
+     <File path="source\derelict\mpg123\package.d" />
     </Folder>
    </Folder>
   </Folder>
