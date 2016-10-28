@@ -1310,8 +1310,8 @@ extern(C) {
     *  You should consult the ID3v2 specification for the use of the various text fields ("frames" in ID3v2 documentation, I use "fields" here to separate from MPEG frames). */
     struct mpg123_text
     {
-        char lang[3]; /**< Three-letter language code (not terminated). */
-        char id[4];   /**< The ID3v2 text field id, like TALB, TPE2, ... (4 characters, no string termination). */
+        char[3] lang; /**< Three-letter language code (not terminated). */
+        char[4] id;   /**< The ID3v2 text field id, like TALB, TPE2, ... (4 characters, no string termination). */
         mpg123_string description; /**< Empty for the generic comment... */
         mpg123_string text;        /**< ... */
     }
