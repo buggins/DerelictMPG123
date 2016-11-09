@@ -401,7 +401,8 @@ extern(C) {
     */
 
     /** Enumeration of the message and error codes and returned by libmpg123 functions. */
-    enum mpg123_errors
+    alias mpg123_errors = int;
+    enum
     {
         MPG123_DONE=-12,	/**< Message: Track ended. Stop decoding. */
         MPG123_NEW_FORMAT=-11,	/**< Message: Output format will be different on next call. Note that some libmpg123 versions between 1.4.3 and 1.8.0 insist on you calling mpg123_getformat() after getting this message code. Newer verisons behave like advertised: You have the chance to call mpg123_getformat(), but you can also just continue decoding and get your data. */
@@ -617,7 +618,7 @@ extern(C) {
     //int mpg123_getformat( mpg123_handle *mh
     //                                    ,	long *rate, int *channels, int *encoding );
     alias da_mpg123_getformat = int function( mpg123_handle *mh
-                          ,	long *rate, int *channels, int *encoding );
+                          , int *rate, int *channels, int *encoding );
 
     /*@}*/
 
